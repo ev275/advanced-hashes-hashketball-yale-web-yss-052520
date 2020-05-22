@@ -1,5 +1,5 @@
 # Write your code below game_hash
-require 'pry'
+#require 'pry'
 def game_hash
   {
     home: {
@@ -215,16 +215,20 @@ def player_stats(player_name_input)
   end
 end
 
-def big_shoe_rebounds
-  def largest_shoe_size_player
-    max_shoe_size = 0
-    max_shoe_size_player = ""
-    game_hash.each do |side, team_info_hash|
+def largest_shoe_size_player
+  max_shoe_size = 0
+  max_shoe_size_player = ""
+  game_hash.each do |side, team_info_hash|
     team_info_hash.each do |attr1, array|
+      #binding.pry
       if attr1 == :players
+        #binding.pry
         array.each do |player_stats|
+          #binding.pry
           player_stats.each do |attr2, value|
+            #binding.pry
             if (attr2 == :shoe) && (player_stats[attr2] > max_shoe_size)
+              #binding.pry
               max_shoe_size = player_stats[attr2]
               max_shoe_size_player = player_stats[:player_name]
             end
@@ -232,10 +236,12 @@ def big_shoe_rebounds
         end
       end
     end
-    return max_shoe_size_player
-    binding.pry
   end
+    return max_shoe_size_player
+    #binding.pry
+end
   
+def big_shoe_rebounds
   game_hash.each do |side, team_info_hash|
     team_info_hash.each do |attr1, array|
       if attr1 == :players
@@ -250,7 +256,6 @@ def big_shoe_rebounds
     end
   end
 end
-    
   
   
   

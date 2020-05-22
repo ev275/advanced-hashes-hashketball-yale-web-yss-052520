@@ -221,6 +221,7 @@ def big_shoe_rebounds
     max_shoe_size_player = ""
     game_hash.each do |side, team_info_hash|
     team_info_hash.each do |attr1, array|
+      binding.pry
       if attr1 == :players
         binding.pry
         array.each do |player_stats|

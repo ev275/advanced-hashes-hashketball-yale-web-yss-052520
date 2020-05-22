@@ -224,6 +224,7 @@ def big_shoe_rebounds
       if attr1 == :players
         array.each do |player_stats|
           player_stats.each do |attr2, value|
+            binding.pry
             if (attr2 == :shoe) && (player_stats[attr2] > max_shoe_size)
               binding.pry
               max_shoe_size = player_stats[attr2]

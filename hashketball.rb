@@ -222,6 +222,7 @@ def big_shoe_rebounds
     game_hash.each do |side, team_info_hash|
     team_info_hash.each do |attr1, array|
       if attr1 == :players
+        binding.pry
         array.each do |player_stats|
           binding.pry
           player_stats.each do |attr2, value|
